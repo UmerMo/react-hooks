@@ -8,6 +8,11 @@ const App = () => {
     { id: 3, name: "John", username: "John112" }
   ];
 
+  const addUser = user => {
+    user.id = users.length + 1;
+    setUsers([...users, user]);
+  };
+
   const [users, setUsers] = useState(usersData);
   return (
     <div className="conatiner">
